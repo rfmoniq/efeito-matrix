@@ -13,7 +13,7 @@ var canvas = document.getElementById ('canvas');
             drops[x] = 1;
         }
 
-        // desenhando os caracteres
+       
         function draw () {
             ctx.fillStyle = 'rgba(0,0,0,0.05)';
             ctx.fillRect (0, 0, canvas.width, canvas.height);
@@ -23,10 +23,10 @@ var canvas = document.getElementById ('canvas');
             // criando o looping 
             for (var i =0; i < drops.length; i++) {
 
-                var text = texts[Math.floor (Math.random()*texts.length)]; // imprime caracteres aleatórios
+                var text = texts[Math.floor (Math.random()*texts.length)];
                 ctx.fillText (text,i*fontSize,drops[i]*fontSize);
 
-                // adicionando gotas aleatórias 
+              
                 if (drops[i]*fontSize > canvas.height || Math.random() > 0.95) {
                     drops[i] = 0;
                 }
